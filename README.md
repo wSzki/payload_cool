@@ -1,133 +1,88 @@
-<a href="https://payloadcms.com"><img width="100%" src="https://l4wlsi8vxy8hre4v.public.blob.vercel-storage.com/github-banner-new-logo.jpg" alt="Payload headless CMS Admin panel built with React" /></a>
-<br />
-<br />
+# Payload Blank Starter
 
-<p align="left">
-  <a href="https://github.com/payloadcms/payload/actions"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/payloadcms/payload/main.yml?style=flat-square"></a>
-  &nbsp;
-  <a href="https://discord.gg/payload"><img alt="Discord" src="https://img.shields.io/discord/967097582721572934?label=Discord&color=7289da&style=flat-square" /></a>
-  &nbsp;
-  <a href="https://www.npmjs.com/package/payload"><img alt="npm" src="https://img.shields.io/npm/dw/payload?style=flat-square" /></a>
-  &nbsp;
-  <a href="https://github.com/payloadcms/payload/graphs/contributors"><img alt="npm" src="https://img.shields.io/github/contributors-anon/payloadcms/payload?color=yellow&style=flat-square" /></a>
-  &nbsp;
-  <a href="https://www.npmjs.com/package/payload"><img alt="npm" src="https://img.shields.io/npm/v/payload?style=flat-square" /></a>
-  &nbsp;
-  <a href="https://twitter.com/payloadcms"><img src="https://img.shields.io/badge/follow-payloadcms-1DA1F2?logo=twitter&style=flat-square" alt="Payload Twitter" /></a>
-</p>
-<hr/>
-<h4>
-<a target="_blank" href="https://payloadcms.com/docs/getting-started/what-is-payload" rel="dofollow"><strong>Explore the Docs</strong></a>&nbsp;·&nbsp;<a target="_blank" href="https://payloadcms.com/community-help" rel="dofollow"><strong>Community Help</strong></a>&nbsp;·&nbsp;<a target="_blank" href="https://github.com/payloadcms/payload/discussions/1539" rel="dofollow"><strong>Roadmap</strong></a>&nbsp;·&nbsp;<a target="_blank" href="https://www.g2.com/products/payload-cms/reviews#reviews" rel="dofollow"><strong>View G2 Reviews</strong></a>
-</h4>
-<hr/>
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/payloadcms/payload/tree/main/templates/with-vercel-mongodb&project-name=payload-project&env=PAYLOAD_SECRET&build-command=pnpm%20run%20ci&stores=%5B%7B%22type%22:%22blob%22%7D%5D&integration-ids=oac_jnzmjqM10gllKmSrG0SGrHOH)
 
-> [!IMPORTANT]
-> 🎉 <strong>We've released 3.0!</strong> Star this repo or keep an eye on it to follow along.
+This template comes configured with the bare minimum to get started on anything you need.
 
-Payload is the first-ever Next.js native CMS that can install directly in your existing `/app` folder. It's the start of a new era for headless CMS.
+## Quick start
 
-<h3>Benefits over a regular CMS</h3>
-<ul>
-  <li>Deploy anywhere, including serverless on Vercel for free</li>
-  <li>Combine your front+backend in the same <code>/app</code> folder if you want</li>
-  <li>Don't sign up for yet another SaaS - Payload is open source</li>
-  <li>Query your database in React Server Components</li>
-  <li>Both admin and backend are 100% extensible</li>
-  <li>No vendor lock-in</li>
-  <li>Never touch ancient WP code again</li>
-  <li>Build faster, never hit a roadblock</li>
-</ul>
+Click the 'Deploy' button above to spin up this template directly into Vercel hosting. It will first prompt you save this template into your own Github repo so that you own the code and can make any changes you want to it.
 
-## Quickstart
+Set up the following services and secrets and then once the app has been built and deployed you will be able to visit your site at the generated URL.
+From this point on you can access your admin panel at `/admin` of your app URL, create an admin user and then click the 'Seed the database' button in the dashboard to add content into your app.
 
-Before beginning to work with Payload, make sure you have all of the [required software](https://payloadcms.com/docs/getting-started/installation).
+### Services
 
-```text
-pnpx create-payload-app@latest
-```
+This project uses the following services integrated into Vercel which you will need to click "Add" and "Connect" for:
 
-**If you're new to Payload, you should start with the website template** (`pnpx create-payload-app@latest -t website`). It shows how to do _everything_ - including custom Rich Text blocks, on-demand revalidation, live preview, and more. It comes with a frontend built with Tailwind all in one `/app` folder.
+Mongo Atlas - MongoDB-based cloud database used to host your data
 
-## One-click templates
+Vercel Blob Storage - object storage used to host your files such as images and videos
 
-Jumpstart your next project by starting with a pre-made template. These are production-ready, end-to-end solutions designed to get you to market as fast as possible.
+The connection variables will automatically be setup for you on Vercel when these services are connected.
 
-### [🌐 Website](https://github.com/payloadcms/payload/tree/main/templates/website)
+#### Secrets
 
-Build any kind of website, blog, or portfolio from small to enterprise. Comes with a fully functional front-end built with RSCs and Tailwind.
+You will be prompted to add the following secret values to your project. These should be long unguessable strong passwords, you can also use a password manager to generate one for these.
 
-We're constantly adding more templates to our [Templates Directory](https://github.com/payloadcms/payload/tree/main/templates). If you maintain your own template, consider adding the `payload-template` topic to your GitHub repository for others to find.
+PAYLOAD_SECRET - used by Payload to sign secrets like JWT tokens
 
-- [Official Templates](https://github.com/payloadcms/payload/tree/main/templates)
-- [Community Templates](https://github.com/topics/payload-template)
+## Quick Start - local setup
 
-## ✨ Features
+To spin up this template locally, follow these steps:
 
-- Completely free and open-source
-- Next.js native, built to run inside _your_ `/app` folder
-- Use server components to extend Payload UI
-- Query your database directly in server components, no need for REST / GraphQL
-- Fully TypeScript with automatic types for your data
-- [Auth out of the box](https://payloadcms.com/docs/authentication/overview)
-- [Versions and drafts](https://payloadcms.com/docs/versions/overview)
-- [Localization](https://payloadcms.com/docs/configuration/localization)
-- [Block-based layout builder](https://payloadcms.com/docs/fields/blocks)
-- [Customizable React admin](https://payloadcms.com/docs/admin/overview)
-- [Lexical rich text editor](https://payloadcms.com/docs/fields/rich-text)
-- [Conditional field logic](https://payloadcms.com/docs/fields/overview#conditional-logic)
-- Extremely granular [Access Control](https://payloadcms.com/docs/access-control/overview)
-- [Document and field-level hooks](https://payloadcms.com/docs/hooks/overview) for every action Payload provides
-- Intensely fast API
-- Highly secure thanks to HTTP-only cookies, CSRF protection, and more
+### Clone
 
-<a target="_blank" href="https://github.com/payloadcms/payload/discussions"><strong>Request Feature</strong></a>
+After you click the `Deploy` button above, you'll want to have standalone copy of this repo on your machine. If you've already cloned this repo, skip to [Development](#development).
 
-## 🗒️ Documentation
+### Development
 
-Check out the [Payload website](https://payloadcms.com/docs/getting-started/what-is-payload) to find in-depth documentation for everything that Payload offers.
+1. First [clone the repo](#clone) if you have not done so already
+2. `cd my-project && cp .env.example .env` to copy the example environment variables. You'll need to add the `MONGODB_URI` and `BLOB_READ_WRITE_TOKEN` from your Vercel project to your `.env` if you want to use Vercel Blob and the Neon database that was created for you.
 
-Migrating from v2 to v3? Check out the [3.0 Migration Guide](https://github.com/payloadcms/payload/blob/main/docs/migration-guide/overview.mdx) on how to do it.
+3. `pnpm install && pnpm dev` to install dependencies and start the dev server
+4. open `http://localhost:3000` to open the app in your browser
 
-## 🙋 Contributing
+That's it! Changes made in `./src` will be reflected in your app. Follow the on-screen instructions to login and create your first admin user. Then check out [Production](#production) once you're ready to build and serve your app, and [Deployment](#deployment) when you're ready to go live.
 
-If you want to add contributions to this repository, please follow the instructions in [contributing.md](./CONTRIBUTING.md).
+#### Docker (Optional)
 
-## 📚 Examples
+If you prefer to use Docker for local development instead of a local MongoDB instance, the provided docker-compose.yml file can be used.
 
-The [Examples Directory](./examples) is a great resource for learning how to setup Payload in a variety of different ways, but you can also find great examples in our blog and throughout our social media.
+To do so, follow these steps:
 
-If you'd like to run the examples, you can use `create-payload-app` to create a project from one:
+- Modify the `MONGODB_URI` in your `.env` file to `mongodb://127.0.0.1/<dbname>`
+- Modify the `docker-compose.yml` file's `MONGODB_URI` to match the above `<dbname>`
+- Run `docker-compose up` to start the database, optionally pass `-d` to run in the background.
 
-```sh
-npx create-payload-app --example example_name
-```
+## How it works
 
-You can see more examples at:
+The Payload config is tailored specifically to the needs of most websites. It is pre-configured in the following ways:
 
-- [Examples Directory](./examples)
-- [Payload Blog](https://payloadcms.com/blog)
-- [Payload YouTube](https://www.youtube.com/@payloadcms)
+### Collections
 
-## 🔌 Plugins
+See the [Collections](https://payloadcms.com/docs/configuration/collections) docs for details on how to extend this functionality.
 
-Payload is highly extensible and allows you to install or distribute plugins that add or remove functionality. There are both officially-supported and community-supported plugins available. If you maintain your own plugin, consider adding the `payload-plugin` topic to your GitHub repository for others to find.
+- #### Users (Authentication)
 
-- [Official Plugins](https://github.com/orgs/payloadcms/repositories?q=topic%3Apayload-plugin)
-- [Community Plugins](https://github.com/topics/payload-plugin)
+  Users are auth-enabled collections that have access to the admin panel.
 
-## 🚨 Need help?
+  For additional help, see the official [Auth Example](https://github.com/payloadcms/payload/tree/main/examples/auth) or the [Authentication](https://payloadcms.com/docs/authentication/overview#authentication-overview) docs.
 
-There are lots of good conversations and resources in our Github Discussions board and our Discord Server. If you're struggling with something, chances are, someone's already solved what you're up against. :point_down:
+- #### Media
 
-- [GitHub Discussions](https://github.com/payloadcms/payload/discussions)
-- [GitHub Issues](https://github.com/payloadcms/payload/issues)
-- [Discord](https://t.co/30APlsQUPB)
-- [Community Help](https://payloadcms.com/community-help)
+  This is the uploads enabled collection. It features pre-configured sizes, focal point and manual resizing to help you manage your pictures.
 
-## ⭐ Like what we're doing? Give us a star
+### Docker
 
-![payload-github-star](https://cms.payloadcms.com/media/payload-github-star.gif)
+Alternatively, you can use [Docker](https://www.docker.com) to spin up this template locally. To do so, follow these steps:
 
-## 👏 Thanks to all our contributors
+1. Follow [steps 1 and 2 from above](#development), the docker-compose file will automatically use the `.env` file in your project root
+1. Next run `docker-compose up`
+1. Follow [steps 4 and 5 from above](#development) to login and create your first admin user
 
-<img align="left" src="https://contributors-img.web.app/image?repo=payloadcms/payload"/>
+That's it! The Docker instance will help you get up and running quickly while also standardizing the development environment across your teams.
+
+## Questions
+
+If you have any issues or questions, reach out to us on [Discord](https://discord.com/invite/payload) or start a [GitHub discussion](https://github.com/payloadcms/payload/discussions).
